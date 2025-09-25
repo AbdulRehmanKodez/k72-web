@@ -3,7 +3,7 @@ import Video from '/src/assets/Components/Home/Video'
 
 const Hometop = () => {
   return (
-    <div className=' text-white  text-center'>
+    <div className=' text-white  text-center font-[font1] mt-[10px]'>
         <div className='text-[10vw] uppercase flex items-center justify-center leading-[9vw]'>L'étincelle</div>
             <div className='flex items-center justify-center'>
         <div className='text-[10vw] uppercase flex items-center justify-center leading-[9vw]'>qui</div> 

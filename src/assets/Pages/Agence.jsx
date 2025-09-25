@@ -8,12 +8,14 @@ const Agence = () => {
 
   const imageDivRef = useRef(null)
   const imageRef = useRef(null)
-  const imageArray = ['/public/dbz.jpg',
+  const imageArray = [
+    '/public/nika.jpg',
+    '/public/Luffy.jpg',
+    '/public/ace2.jpg',
+    '/public/dbz.jpg',
     '/public/Sanji.jpg',
     '/public/doffy.jpg',
-    '/public/Luffy.jpg',
     '/public/Zoro.jpg',
-    '/public/nika.jpg',
     '/public/sabo.jpg',
     '/public/rock.jpg',
     '/public/shanks.jpg',
@@ -25,10 +27,10 @@ const Agence = () => {
     gsap.to(imageDivRef.current,{
          scrollTrigger:{
           trigger:imageDivRef.current,
-          markers:true,
+          
           pin:true,
           start:"top 35%",
-          end:"top -50%",
+          end:"top -130%",
           onUpdate:(elam)=>{
             const index = Math.floor (elam.progress*imageArray.length)
             if (index=== 0){
@@ -58,6 +60,9 @@ const Agence = () => {
             if (index=== 8){
                imageRef.current.src =imageArray[8]
             }
+            if (index=== 9){
+               imageRef.current.src =imageArray[9]
+            }
         
   }
 
@@ -65,16 +70,16 @@ const Agence = () => {
     })
   })
   return (
-    <div>
+    <div >
       <div className='section1'>
-          <div ref={imageDivRef} className='absolute h-[300px] w-[220px] top-60 left-100 rounded-2xl overflow-hidden bg-amber-500'>
+          <div ref={imageDivRef} className='absolute h-[300px] w-[220px] top-60 left-100 rounded-2xl overflow-hidden '>
             <img ref={imageRef} className='' src="/public/dbz.jpg" alt="" />
       </div>
      <div >
-      <h1 className='relative text-[290px] text-amber-50 text-center mt-[320px] uppercase leading-60'>Soixan7e  <br />douze</h1>
+      <h1 className='relative text-[270px] font-[font2] text-black text-center mt-[380px] uppercase leading-60'>Soixan7e  <br />douze</h1>
      </div>
      <div >
-      <p className='text-amber-50 pl-[60%]  text-[20px] mt-20'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"  Pirates are evil? Marines are righteous? These terms have always changed throughout the course of history! Kids who have never seen peace and kids who have never seen war have different values! Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? Of course it will… but only those who win the war will become Justice!"</p>
+      <p className='text-black pl-[50%]  text-[40px] font-[font1] mt-20'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"  Pirates are evil? Marines are righteous? These terms have always changed throughout the course of history! Kids who have never seen peace and kids who have never seen war have different values! Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? Of course it will… but only those who win the war will become Justice!"</p>
      </div>
 
       </div>
