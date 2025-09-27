@@ -30,7 +30,7 @@ const Agence = () => {
           
           pin:true,
           start:"top 35%",
-          end:"top -130%",
+          end:"top -100%",
           onUpdate:(elam)=>{
             const index = Math.floor (elam.progress*imageArray.length)
             if (index=== 0){
@@ -69,6 +69,32 @@ const Agence = () => {
          }
     })
   })
+
+                  
+  // section2
+
+   useGSAP(function(){
+        gsap.from(".rotateText",{
+           rotationX: -90,
+
+            duration:1,
+            opacity:0,
+            stagger:1,
+            scrollTrigger:{
+                trigger:".rotateText",
+                // markers:true,
+                start:"top 80%",
+                end:"top -150%",
+
+                scrub:2
+            }
+        })
+    })
+
+
+
+
+
   return (
     <div >
       <div className='section1'>
@@ -83,8 +109,32 @@ const Agence = () => {
      </div>
 
       </div>
-      <div className='swction2 h-screen'></div>
+                             {/* section 2 */}
+
+
+      <div className='swction2 '></div>
+       <div id='pg2-main' className='bg-white text-black '>
+
+        <div  className='rotateText '>
+            <h1  className=' text-[20vw]  font-[Font1] flex items-center justify-center leading-[35vw] ' >MY</h1>
+        </div>
+        <div className='rotateText'>
+            <h1 className=' text-[20vw]  font-[Font1] flex items-center justify-center leading-[35vw]' >SOLDERS</h1>
+        </div>
+        <div className='rotateText'>
+            <h1 className=' text-[20vw]  font-[Font1] flex items-center justify-center leading-[35vw]' >PUSH</h1>
+        </div>
+        <div className='rotateText'>
+        <h1 className=' text-[20vw]  font-[Font1] flex items-center justify-center leading-[35vw]' >FORWARD</h1>
+        </div>
+        <div className='h-[2px] w-[45vw] bg-black mx-auto mt-32 mb-20'>
+            
+            
+        </div>
+          
     </div>
+    </div>
+    
   )
 }
 

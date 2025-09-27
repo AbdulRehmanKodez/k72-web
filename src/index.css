@@ -1,15 +1,18 @@
 @import "tailwindcss";
+
 @font-face {
-    font-family: font1;
-    src: url(/public/Lausanne-300.woff2);
-    
+  font-family: font1;
+  src: url("font1.woff2") format("woff2");
 }
+
 @font-face {
-    font-family: font2;
-    src: url(/public/Lausanne-500.woff2);
+  font-family: font2;
+  src: url("font2.woff2") format("woff2");
 }
+
 body{
     background: white;
+    overflow-x: hidden;
 }
 .moveX{
     animation-name: moveAnimation;
@@ -32,4 +35,12 @@ body{
     to{
         transform: translateX(-100%);
     }
+}
+.stairparent {
+    pointer-events: none;
+}
+.stair{
+    background: rgba(128, 128, 128, 0.5); /* medium grey + transparency */
+  backdrop-filter: blur(8px);           /* blur effect */
+  -webkit-backdrop-filter: blur(8px);   /* Safari support */
 }
